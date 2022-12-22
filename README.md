@@ -1,11 +1,3 @@
-# fresh project
+# Fruitinfo
 
-### Usage
-
-Start the project:
-
-```
-deno task start
-```
-
-This will watch the project directory and restart as necessary.
+Simple project using Deno's 🦖 Fresh 🍋 framework.
