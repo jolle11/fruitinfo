@@ -2,8 +2,6 @@ import { Head } from "$fresh/runtime.ts";
 import { Handlers, PageProps } from "$fresh/server.ts";
 import FruitCard from "../islands/FruitCard.tsx";
 
-// import { useState } from "https://esm.sh/v99/preact@10.11.0/hooks/src/index";
-
 interface Fruit {
 	genus: string;
 	name: string;
@@ -46,9 +44,11 @@ const Home = ({ data }: PageProps<Fruit[]>) => {
 				<h1>Search Fruits</h1>
 				<input type="text" class="border-2 rounded" />
 			</div>
-			{data.map((fruit) => (
-				<FruitCard {...fruit} />
-			))}
+			<div class="flex flex-wrap justify-evenly mx-auto">
+				{data.map((fruit) => (
+					<FruitCard {...fruit} />
+				))}
+			</div>
 		</>
 	);
 };
